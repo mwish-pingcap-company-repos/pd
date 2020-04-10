@@ -68,3 +68,5 @@ require (
 	gopkg.in/yaml.v2 v2.2.8 // indirect
 	honnef.co/go/tools v0.0.1-2020.1.3
 )
+
+replace github.com/pingcap/kvproto => github.com/mwish-pingcap-company-repos/kvproto v0.0.0-20200410082716-9250a05b565d
