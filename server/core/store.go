@@ -523,6 +523,7 @@ func NewStoresInfo() *StoresInfo {
 // GetStore returns a copy of the StoreInfo with the specified storeID.
 func (s *StoresInfo) GetStore(storeID uint64) *StoreInfo {
 	store, ok := s.stores[storeID]
+	log.Info("GetStore load deploy_path " + store.meta.DeployPath)
 	if !ok {
 		return nil
 	}
@@ -540,6 +541,7 @@ func (s *StoresInfo) TakeStore(storeID uint64) *StoreInfo {
 
 // SetStore sets a StoreInfo with storeID.
 func (s *StoresInfo) SetStore(store *StoreInfo) {
+	log.Info("SetStore has deploy_path " + store.meta.DeployPath)
 	s.stores[store.GetID()] = store
 }
 
